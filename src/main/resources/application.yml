@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /jwt
+spring:
+  application:
+    name: jwt_login
+  datasource:
+    url: jdbc:mysql://#?????ip:3306/#??????useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: #?????username
+    password: #???????
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      async-init: true
+      initial-size: 10
+      max-active: 10
+      min-idle: 5
+
+  redis:
+    host: #??redis ip
+    port: 6379
+    password: #??redis password
+    lettuce:
+      pool:
+        max-wait: 1000
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+  thymeleaf:
+    check-template: false
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      table-prefix: jwt_login_
+logging:
+  level:
+    root: warn
