@@ -6,10 +6,10 @@ spring:
   application:
     name: jwt_login
   datasource:
-    url: jdbc:mysql://#?????ip:3306/#??????useSSL=false
+    url: jdbc:mysql://124.222.35.20:3306/my_db?useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: #?????username
-    password: #???????
+    username: ding
+    password: dyw20020304
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       async-init: true
@@ -18,9 +18,9 @@ spring:
       min-idle: 5
 
   redis:
-    host: #??redis ip
+    host: 124.222.35.20
     port: 6379
-    password: #??redis password
+    password: dyw20020304
     lettuce:
       pool:
         max-wait: 1000
